@@ -3,11 +3,11 @@
 
 echo "🚀 Starting Brain Execution Server on port 9998..."
 
-cd /Users/bard/Code/claude-brain/monitor
+cd $HOME/Code/claude-brain/monitor
 
 # Check if server.py exists
 if [ ! -f "server.py" ]; then
-    echo "❌ Error: server.py not found at /Users/bard/Code/claude-brain/monitor/server.py"
+    echo "❌ Error: server.py not found at $HOME/Code/claude-brain/monitor/server.py"
     exit 1
 fi
 

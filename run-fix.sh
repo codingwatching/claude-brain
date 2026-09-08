@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /Users/bard/Code/claude-brain
+cd $HOME/Code/claude-brain
 node fix-imports-final.js

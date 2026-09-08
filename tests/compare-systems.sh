@@ -7,8 +7,8 @@ echo
 
 # Check database sizes
 echo "📊 Database Comparison:"
-OLD_DB="/Users/bard/Code/brain/data/brain.db"
-NEW_DB="/Users/bard/Code/claude-brain/data/brain/brain.db"
+OLD_DB="$HOME/Code/brain/data/brain.db"
+NEW_DB="$HOME/Code/claude-brain/data/brain/brain.db"
 
 if [ -f "$OLD_DB" ]; then
     OLD_SIZE=$(du -h "$OLD_DB" | cut -f1)
@@ -26,9 +26,9 @@ fi
 
 echo
 echo "📁 Directory Structure:"
-echo "   Old: /Users/bard/Code/brain ($(du -sh /Users/bard/Code/brain 2>/dev/null | cut -f1))"
-echo "   Old: /Users/bard/Code/brain-unified ($(du -sh /Users/bard/Code/brain-unified 2>/dev/null | cut -f1))"
-echo "   New: /Users/bard/Code/claude-brain ($(du -sh /Users/bard/Code/claude-brain 2>/dev/null | cut -f1))"
+echo "   Old: $HOME/Code/brain ($(du -sh $HOME/Code/brain 2>/dev/null | cut -f1))"
+echo "   Old: $HOME/Code/brain-unified ($(du -sh $HOME/Code/brain-unified 2>/dev/null | cut -f1))"
+echo "   New: $HOME/Code/claude-brain ($(du -sh $HOME/Code/claude-brain 2>/dev/null | cut -f1))"
 
 echo
 echo "🔧 Service Status:"

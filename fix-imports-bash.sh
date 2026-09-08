@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /Users/bard/Code/claude-brain
+cd $HOME/Code/claude-brain
 
 # Create a temporary file with the fixed line 34
 echo "import crypto from 'crypto';" > temp_line34.txt

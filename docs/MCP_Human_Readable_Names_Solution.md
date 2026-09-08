@@ -11,16 +11,16 @@
 Location: `~/.local/bin/mcp-wrappers/`
 
 Wrapper scripts created:
-- `mcp-brain-manager` → `/Users/bard/Code/mcp-brain-manager/dist/index.js`
-- `mcp-project-finder` → `/Users/bard/Code/mcp-project-finder/server.js`
-- `mcp-tracked-search` → `/Users/bard/Code/mcp-tracked-search/build/index.js`
-- `mcp-tools-registry` → `/Users/bard/Code/mcp-tools-registry/dist/index.js`
-- `mcp-protocol-tracker` → `/Users/bard/Code/mcp-protocol-tracker/src/index.js`
-- `mcp-smart-help` → `/Users/bard/Code/mcp-smart-help/dist/index.js`
-- `mcp-reminders` → `/Users/bard/Code/mcp-reminders/dist/index.js`
-- `mcp-elvis` → `/Users/bard/Code/mcp-elvis-simple/src/index.js`
-- `mcp-contemplation` → `/Users/bard/Code/mcp-contemplation/build/index.js`
-- `mcp-mercury-evolution` → `/Users/bard/Code/mcp-mercury-evolution/dist/index.js`
+- `mcp-brain-manager` → `~/Code/mcp-brain-manager/dist/index.js`
+- `mcp-project-finder` → `~/Code/mcp-project-finder/server.js`
+- `mcp-tracked-search` → `~/Code/mcp-tracked-search/build/index.js`
+- `mcp-tools-registry` → `~/Code/mcp-tools-registry/dist/index.js`
+- `mcp-protocol-tracker` → `~/Code/mcp-protocol-tracker/src/index.js`
+- `mcp-smart-help` → `~/Code/mcp-smart-help/dist/index.js`
+- `mcp-reminders` → `~/Code/mcp-reminders/dist/index.js`
+- `mcp-elvis` → `~/Code/mcp-elvis-simple/src/index.js`
+- `mcp-contemplation` → `~/Code/mcp-contemplation/build/index.js`
+- `mcp-mercury-evolution` → `~/Code/mcp-mercury-evolution/dist/index.js`
 
 ### 2. Wrapper Script Format
 
@@ -42,14 +42,14 @@ Updated Claude Desktop configuration saved as:
 ```json
 "brain-manager": {
   "command": "node",
-  "args": ["/Users/bard/Code/mcp-brain-manager/dist/index.js"]
+  "args": ["~/Code/mcp-brain-manager/dist/index.js"]
 }
 ```
 
 **After**:
 ```json
 "brain-manager": {
-  "command": "/Users/bard/.local/bin/mcp-wrappers/mcp-brain-manager"
+  "command": "~/.local/bin/mcp-wrappers/mcp-brain-manager"
 }
 ```
 

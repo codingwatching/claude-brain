@@ -1,8 +1,8 @@
 #!/bin/bash
 # Simple vault analysis script that ELVIS can run
 
-VAULT_PATH="/Users/bard/Code/claude-brain/data/BrainVault"
-OUTPUT_FILE="/Users/bard/Code/claude-brain/vault-analysis-$(date +%Y%m%d-%H%M%S).txt"
+VAULT_PATH="$HOME/Code/claude-brain/data/BrainVault"
+OUTPUT_FILE="$HOME/Code/claude-brain/vault-analysis-$(date +%Y%m%d-%H%M%S).txt"
 
 echo "=== OBSIDIAN VAULT ANALYSIS ===" > $OUTPUT_FILE
 echo "Vault: $VAULT_PATH" >> $OUTPUT_FILE

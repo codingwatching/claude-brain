@@ -18,10 +18,10 @@ No installation required - just use the Python script directly:
 
 ```bash
 # Make executable (already done)
-chmod +x /Users/bard/Code/claude-brain/background_vault_analyzer.py
+chmod +x ~/Code/claude-brain/background_vault_analyzer.py
 
 # Test the system
-python /Users/bard/Code/claude-brain/background_vault_analyzer.py test
+python ~/Code/claude-brain/background_vault_analyzer.py test
 ```
 
 ### Basic Usage
@@ -152,7 +152,7 @@ The system tracks and reports:
 - Error counts and uptime
 
 ### Database Location
-Analysis results stored in: `/Users/bard/Code/claude-brain/vault_analysis.db`
+Analysis results stored in: `~/Code/claude-brain/vault_analysis.db`
 
 ## Troubleshooting
 
@@ -222,7 +222,7 @@ Create a Launch Agent for automatic startup:
     <key>ProgramArguments</key>
     <array>
         <string>/usr/bin/python3</string>
-        <string>/Users/bard/Code/claude-brain/background_vault_analyzer.py</string>
+        <string>~/Code/claude-brain/background_vault_analyzer.py</string>
         <string>start</string>
         <string>--daemon</string>
     </array>
@@ -253,7 +253,7 @@ For one-time analysis of entire vault:
 python background_vault_analyzer.py force-analysis
 
 # Check results
-sqlite3 /Users/bard/Code/claude-brain/vault_analysis.db "SELECT COUNT(*) FROM file_analysis;"
+sqlite3 ~/Code/claude-brain/vault_analysis.db "SELECT COUNT(*) FROM file_analysis;"
 ```
 
 ## Expected Results
@@ -288,7 +288,7 @@ python background_vault_analyzer.py status
 
 ### View Database Contents
 ```bash
-sqlite3 /Users/bard/Code/claude-brain/vault_analysis.db
+sqlite3 ~/Code/claude-brain/vault_analysis.db
 .tables
 SELECT * FROM file_analysis LIMIT 5;
 SELECT * FROM connections WHERE auto_applied = 1 LIMIT 5;
@@ -297,7 +297,7 @@ SELECT * FROM connections WHERE auto_applied = 1 LIMIT 5;
 ### Reset System
 To start fresh:
 ```bash
-rm /Users/bard/Code/claude-brain/vault_analysis.db
+rm ~/Code/claude-brain/vault_analysis.db
 python background_vault_analyzer.py force-analysis
 ```
 

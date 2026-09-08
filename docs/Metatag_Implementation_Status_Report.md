@@ -39,7 +39,7 @@ Successfully implemented source attribution metatags across critical MCP tools t
 ## Technical Implementation
 
 ### Shared Utility Framework
-- **Location**: `/Users/bard/Code/mcp-shared-utils/metatags.js`
+- **Location**: `~/Code/mcp-shared-utils/metatags.js`
 - **Functions Available**:
   - `wrapInMetatag(content, options)` - Generic wrapper
   - `searchMetatag(content, query, url)` - Search-specific

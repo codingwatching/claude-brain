@@ -8,23 +8,23 @@ echo "================================================"
 
 # Backup first
 echo "📦 Creating backups..."
-cp -r /Users/bard/Code/claude-brain/brain-init-v5 /Users/bard/Code/claude-brain/brain-init-v5.backup-console-fix
-cp /Users/bard/Code/claude-brain/brain-integration-wrapper.js /Users/bard/Code/claude-brain/brain-integration-wrapper.js.backup-console-fix
+cp -r $HOME/Code/claude-brain/brain-init-v5 $HOME/Code/claude-brain/brain-init-v5.backup-console-fix
+cp $HOME/Code/claude-brain/brain-integration-wrapper.js $HOME/Code/claude-brain/brain-integration-wrapper.js.backup-console-fix
 
 # Fix brain-integration-wrapper.js
 echo "✏️  Fixing brain-integration-wrapper.js..."
-sed -i '' 's/console\.log(/console.error(/g' /Users/bard/Code/claude-brain/brain-integration-wrapper.js
+sed -i '' 's/console\.log(/console.error(/g' $HOME/Code/claude-brain/brain-integration-wrapper.js
 
 # Fix all files in brain-init-v5 directory
 echo "✏️  Fixing brain-init-v5 directory files..."
-find /Users/bard/Code/claude-brain/brain-init-v5 -name "*.js" -exec sed -i '' 's/console\.log(/console.error(/g' {} \;
+find $HOME/Code/claude-brain/brain-init-v5 -name "*.js" -exec sed -i '' 's/console\.log(/console.error(/g' {} \;
 
 # Count changes
 echo ""
 echo "📊 Summary of changes:"
 echo "-------------------"
-WRAPPER_COUNT=$(grep -c "console.error" /Users/bard/Code/claude-brain/brain-integration-wrapper.js)
-V5_COUNT=$(grep -r "console.error" /Users/bard/Code/claude-brain/brain-init-v5/ --include="*.js" | wc -l)
+WRAPPER_COUNT=$(grep -c "console.error" $HOME/Code/claude-brain/brain-integration-wrapper.js)
+V5_COUNT=$(grep -r "console.error" $HOME/Code/claude-brain/brain-init-v5/ --include="*.js" | wc -l)
 
 echo "  • brain-integration-wrapper.js: $WRAPPER_COUNT console.error statements"
 echo "  • brain-init-v5 directory: $V5_COUNT console.error statements"

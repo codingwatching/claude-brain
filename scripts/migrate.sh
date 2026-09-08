@@ -7,9 +7,9 @@ echo "🔄 Starting migration to claude-brain..."
 echo
 
 # Source directories
-BRAIN_DIR="/Users/bard/Code/brain"
-BRAIN_UNIFIED_DIR="/Users/bard/Code/brain-unified"
-TARGET_DIR="/Users/bard/Code/claude-brain"
+BRAIN_DIR="$HOME/Code/brain"
+BRAIN_UNIFIED_DIR="$HOME/Code/brain-unified"
+TARGET_DIR="$HOME/Code/claude-brain"
 
 cd $TARGET_DIR
 

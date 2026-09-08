@@ -6,9 +6,9 @@
 
 ### Vault Location (MEMORIZE THIS)
 ```
-OBSIDIAN BRAIN VAULT: /Users/bard/Code/claude-brain/data/BrainVault
+OBSIDIAN BRAIN VAULT: ~/Code/claude-brain/data/BrainVault
 ```
-This is the ONLY correct path. NOT /Users/bard/Documents/Obsidian or anywhere else.
+This is the ONLY correct path. NOT ~/Documents/Obsidian or anywhere else.
 
 ### Current Status
 - **Total Notes**: 682
@@ -21,18 +21,18 @@ This is the ONLY correct path. NOT /Users/bard/Documents/Obsidian or anywhere el
 #### Analysis Output Files
 ```bash
 # Actual vault analysis with real data
-/Users/bard/Code/claude-brain/vault-analysis-20250809-131343.txt
+~/Code/claude-brain/vault-analysis-20250809-131343.txt
 
 # Scripts created for analysis
-/Users/bard/Code/claude-brain/analyze-vault.sh           # Bash script that works
-/Users/bard/Code/claude-brain/ollama-vault-analyzer.js    # Node.js Ollama analyzer
-/Users/bard/Code/claude-brain/test-vault-analyzer.js      # Test script
+~/Code/claude-brain/analyze-vault.sh           # Bash script that works
+~/Code/claude-brain/ollama-vault-analyzer.js    # Node.js Ollama analyzer
+~/Code/claude-brain/test-vault-analyzer.js      # Test script
 ```
 
 #### Obsidian Notes Created
 ```
-/Users/bard/Code/claude-brain/data/BrainVault/continuation-notes/Vault Organization - ELVIS Background Tasks.md
-/Users/bard/Code/claude-brain/data/BrainVault/continuation-notes/Vault Analysis Results - 2025-08-09.md
+~/Code/claude-brain/data/BrainVault/continuation-notes/Vault Organization - ELVIS Background Tasks.md
+~/Code/claude-brain/data/BrainVault/continuation-notes/Vault Analysis Results - 2025-08-09.md
 ```
 
 ### State & Memory Keys
@@ -75,28 +75,28 @@ brain_recall("VAULT_PATH_CRITICAL")             // Memory with vault path
 
 #### Project Directories
 ```bash
-/Users/bard/Code/automated-vault-organization     # Has MCP server but not working properly
-/Users/bard/Code/background-vault-analysis        # Working but limited functionality
-/Users/bard/Code/claude-brain                     # Main project directory
-/Users/bard/Code/claude-brain/data/BrainVault     # THE VAULT
+~/Code/automated-vault-organization     # Has MCP server but not working properly
+~/Code/background-vault-analysis        # Working but limited functionality
+~/Code/claude-brain                     # Main project directory
+~/Code/claude-brain/data/BrainVault     # THE VAULT
 ```
 
 ### Next Steps for Continuation
 
 1. **Load this note first**:
    ```javascript
-   filesystem:read_file("/Users/bard/Code/claude-brain/CONTINUATION_VAULT_ORGANIZATION.md")
+   filesystem:read_file("~/Code/claude-brain/CONTINUATION_VAULT_ORGANIZATION.md")
    ```
 
 2. **Verify vault path**:
    ```javascript
    brain:state_get("config", "OBSIDIAN_BRAIN_VAULT")
-   // Should return: /Users/bard/Code/claude-brain/data/BrainVault
+   // Should return: ~/Code/claude-brain/data/BrainVault
    ```
 
 3. **Check analysis results**:
    ```javascript
-   filesystem:read_file("/Users/bard/Code/claude-brain/vault-analysis-20250809-131343.txt")
+   filesystem:read_file("~/Code/claude-brain/vault-analysis-20250809-131343.txt")
    ```
 
 4. **Start connecting orphans** (Phase 1 - Easy wins):
@@ -112,14 +112,14 @@ brain_recall("VAULT_PATH_CRITICAL")             // Memory with vault path
 ### Important Lessons Learned
 - **ELVIS is the right tool** for long-running Ollama tasks - don't wait for completion
 - **Ollama doesn't return JSON reliably** - use plaintext output instead
-- **The bash script works** - `/Users/bard/Code/claude-brain/analyze-vault.sh` gives real data
+- **The bash script works** - `~/Code/claude-brain/analyze-vault.sh` gives real data
 - **Background tasks write to files** - check for output files, don't wait for returns
 - **Vault path must be hardcoded** - environment variables don't persist
 
 ### Command Reference
 ```bash
 # Run quick analysis
-cd /Users/bard/Code/claude-brain && ./analyze-vault.sh
+cd ~/Code/claude-brain && ./analyze-vault.sh
 
 # Check ELVIS tasks
 elvis:elvis_list()
@@ -131,7 +131,7 @@ elvis:elvis_delegate(task="analyze vault...", model="llama3.2")
 ```
 
 ### Critical Reminder
-The vault is at `/Users/bard/Code/claude-brain/data/BrainVault` - ALWAYS use this exact path. Do not search for it or guess. This is inside the claude-brain project, NOT in Documents/Obsidian.
+The vault is at `~/Code/claude-brain/data/BrainVault` - ALWAYS use this exact path. Do not search for it or guess. This is inside the claude-brain project, NOT in Documents/Obsidian.
 
 ## Session Complete
 Progress made: Successfully analyzed vault, identified 402 orphans, created action plan to reduce to ~200.

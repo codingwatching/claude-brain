@@ -54,7 +54,8 @@ export const brainInitV5WorkingTool = {
       // SOLUTION TO MCP CONTEXT BLACK HOLE: Write structured output to file
       const fs = await import('fs');
       const path = await import('path');
-      const outputDir = '/Users/bard/Code/Claude_Data/tool_outputs';
+      const os = await import('os');
+      const outputDir = path.join(os.homedir(), 'Code/Claude_Data/tool_outputs');
       
       // Ensure directory exists
       await fs.promises.mkdir(outputDir, { recursive: true });

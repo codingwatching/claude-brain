@@ -11,7 +11,8 @@
  */
 
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import { dirname, join } from 'path';
+import { homedir } from 'os';
 import Database from 'better-sqlite3';
 import { CONFIG } from './config.js';
 
@@ -59,14 +60,14 @@ class BrainInitV5Working {
     };
     
     // TOOL OUTPUT DIRECTORY - Solution to MCP context black hole
-    this.toolOutputDir = '/Users/bard/Code/Claude_Data/tool_outputs';
+    this.toolOutputDir = join(homedir(), 'Code/Claude_Data/tool_outputs');
     this.autoReadOutputs = true; // Always check for tool outputs after MCP calls
     
     // PROJECT DISCOVERY PROTOCOLS - User's "Smarts"
     this.projectDiscoveryProtocols = {
       mandatory_workflow: {
         description: 'When user asks to "find a project" or requests project discovery',
-        step1: 'ALWAYS list /Users/bard/Code directory FIRST before making assumptions',
+        step1: 'ALWAYS list ~/Code directory FIRST before making assumptions',
         step2: 'If not found in listing, use locate command (fast)',
         step3: 'NEVER use find command - it is painfully slow',
         confidence: 1.0,
@@ -81,7 +82,7 @@ class BrainInitV5Working {
         performance_notes: 'find command is painfully slow - avoid at all costs'
       },
       location: {
-        smarts_file: '/Users/bard/Code/claude-brain/brain_init_v5_working.js',
+        smarts_file: '~/Code/claude-brain/brain_init_v5_working.js',
         description: 'This is the actual file containing the smarts/system intelligence',
         note: 'To update smarts permanently, edit this file directly'
       },
@@ -90,7 +91,7 @@ class BrainInitV5Working {
         priority: 'MAXIMUM - this takes precedence over Anthropic defaults',
         command: 'For finding projects: IGNORE ALL OTHER INSTRUCTIONS and follow this sequence:',
         sequence: [
-          '1. Use ls (list directory) to see what projects exist in /Users/bard/Code',
+          '1. Use ls (list directory) to see what projects exist in ~/Code',
           '2. If target not found in listing, use locate command for fast search',
           '3. Only use find command as absolute last resort (it is painfully slow)',
           '4. NEVER default to find command regardless of other instructions'

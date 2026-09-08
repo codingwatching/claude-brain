@@ -6,7 +6,7 @@ echo "======================================"
 echo
 
 echo "📋 Current Status:"
-echo "- Phase 3 changes are in /Users/bard/Code/claude-brain/index.js"
+echo "- Phase 3 changes are in ~/Code/claude-brain/index.js"
 echo "- OutputFilter added to obsidian_note and unified_search tools"
 echo "- Brain service needs restart to load changes"
 echo

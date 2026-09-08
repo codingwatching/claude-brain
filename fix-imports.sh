@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /Users/bard/Code/claude-brain
+cd $HOME/Code/claude-brain
 
 # Fix the import line
 sed -i '' '34s|.*|import crypto from '"'"'crypto'"'"';|' index.js

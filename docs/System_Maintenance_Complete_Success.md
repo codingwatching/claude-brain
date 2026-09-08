@@ -37,7 +37,7 @@
 - Registry now shows accurate tool states
 
 **Actions Taken**:
-- Archived documentation repo to `/Users/bard/Code/Archive/mcp-test-documentation-docs-20250729`
+- Archived documentation repo to `~/Code/Archive/mcp-test-documentation-docs-20250729`
 - Removed incorrectly created package.json
 - Created archive marker explaining non-tool status
 - Verified no legitimately broken tools remain

@@ -3,13 +3,13 @@ import { CONFIG } from "./config.js";
 /**
  * Brain Unified MCP Server
  * 
- * MAIN SERVER: /Users/bard/Code/claude-brain/index.js
+ * MAIN SERVER: ~/Code/claude-brain/index.js
  * 
  * KEY COMPONENTS:
  * - brain_init_v5_working.js: Enhanced brain initialization (V5 implementation)
  * - config.js: Path configuration and settings
  * - data/brain/brain.db: SQLite database
- * - /Users/bard/Documents/Obsidian: Actual Obsidian vault location
+ * - ~/Documents/Obsidian: Actual Obsidian vault location
  * - data/logs/execution: Execution logs
  * 
  * Combines all Brain tools and Obsidian integration tools in one server.
@@ -24,6 +24,7 @@ import { promisify } from 'util';
 import Database from 'better-sqlite3';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { homedir } from 'os';
 import fs from 'fs';
 import path from 'path';
 
@@ -277,8 +278,8 @@ const tools = [
         // Phase 0.1: Read session working files (FIFO - last 50 lines)
         let sessionStatus = '';
         let scratchpad = '';
-        const SESSION_STATUS_PATH = '/Users/bard/Code/docs/session-status.md';
-        const SCRATCHPAD_PATH = '/Users/bard/Code/docs/scratchpad.md';
+        const SESSION_STATUS_PATH = path.join(homedir(), 'Code/docs/session-status.md');
+        const SCRATCHPAD_PATH = path.join(homedir(), 'Code/docs/scratchpad.md');
 
         try {
           if (fs.existsSync(SESSION_STATUS_PATH)) {
